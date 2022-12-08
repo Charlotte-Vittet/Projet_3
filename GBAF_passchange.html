@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>GBAF - Changement de mot de passe</title>
+        <link rel="stylesheet" href="GBAF_styles.css">
+    </head>
+
+
+    <body>
+        <div class="bloc_page">
+            <header>                                                <!--Logo + ico + nav-->
+                <img class="logo_gbaf" src="images/logo_GBAF.png" alt="Logo de GBAF">             
+                <div class="logo_nav">               
+                    <img class="user_icon" src="images/user_icon.ico" alt="Icône Utilisateur">
+                    <div class="nav">
+                        <button class="nav_button">Nom et Prénom</button>
+                        <div class="nav_content">
+                          <a href="#">Paramètres du compte</a>
+                          <a href="GBAF_Connexion.html">Se déconnecter</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+        <body>
+            <section class="form_design box_design">
+                <h2>Changement de votre mot de passe</h2>
+                <form action=""> <!-- supprimer BR >> display flex + flex direction column-->
+                    <label for="username">Nom d'utilisateur</label>
+                    <input type="text" name="username" id="username" placeholder="Entrez votre nom d'utilisateur" required autofocus>
+                    <br>
+                    <label for="question">Question secrète</label>
+                    <input type="text" name="question" id="question" placeholder="Entrez votre question secrète" required>
+                    <br>
+                    <label for="answer">Réponse à votre question secrète</label>
+                    <input type="text" name="answer" id="answer" placeholder="Entrez la réponse de votre question secrète" required>
+                    <br>
+                    <input type="submit" class="red_button" value="Changer mon mot de passe">
+                </form>
+
+            </section>
+        </body>
+
+        <footer>
+            <a href="mentions">Mentions Légales</a>
+            <a href="mailto:contact-gbaf@gbaf.fr">Contact</a>
+        </footer>
+    </div>
+
+</html>

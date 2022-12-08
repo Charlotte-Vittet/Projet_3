@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>GBAF - Connexion</title>
+        <link rel="stylesheet" href="GBAF_styles.css">
+    </head>
+
+
+    <body>
+        <div class="bloc_page"> 
+            <!-- logo_nav dispay none si non connecté
+                 link page d'inscription
+                 link page créer nouveau motdepasse
+            -->
+            <header>                                                <!--Logo + ico + nav-->
+                <img class="logo_gbaf" src="images/logo_GBAF.png" alt="Logo de GBAF">             
+                <div class="logo_nav">               
+                    <img class="user_icon" src="images/user_icon.ico" alt="Icône Utilisateur">
+                    <div class="nav">
+                        <button class="nav_button">Nom et Prénom</button>
+                        <div class="nav_content">
+                          <a href="#">Paramètres du compte</a>
+                          <a href="GBAF_Connexion.html">Se déconnecter</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+            <section class="connexion_inscription flex_col">
+
+                <div class="connexion form_design box_design">
+                    <h2>GBAF Se connecter</h2>
+                    <form action=""> 
+                        <label for="username">Nom d'utilisateur</label>
+                        <input type="text" name="username" id="username" placeholder="Entrez votre nom d'utilisateur" required autofocus>
+                        
+                        <label for="password">Mot de passe</label>
+                        <input type="password" name="password" id="password" placeholder="Entrez votre mot de passe" required>
+                        
+                        <input class="red_button" type="submit" id="bouton_connexion" value="Connexion">
+                    </form>
+                    <a class="forgot" href="" title="Créez un nouveau mot de passe">Mot de passe oublié?</a>
+                </div>
+
+                <div class="create_account box_design flex_col">
+                    <h2>Première connexion?</h2>
+                    <a  class="red_button" href="GBAF_Inscription.html" title="Inscription" >Créer un nouveau compte</a>
+
+                </div>
+
+            </section>
+
+
+
+
+
+            <footer>
+                <a href="GBAF_mentions.html">Mentions Légales</a>
+                <a href="mailto:contact-gbaf@gbaf.fr">Contact</a>
+            </footer>
+
+        </div>
+    </body>
+</html>

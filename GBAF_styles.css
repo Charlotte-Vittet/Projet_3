@@ -1,0 +1,409 @@
+.bloc_page {
+    margin: auto;
+    min-width: 480px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex_col {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h1, h2, h3{         /* telecharger ARIAL ROUNDED MT font*/
+    font-size: 1.8em;
+    color: #c90000;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+
+/*  BREAKPOINTS:
+X-Small	            None    	<576px
+Small	            sm      	≥576px
+Medium	            md      	≥768px
+Large	            lg      	≥992px
+Extra large 	    xl	        ≥1200px
+Extra extra large	xxl     	≥1400px     */
+
+
+
+/*EN TETE*************************************************************************************************/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+    border-bottom: 2px solid black;
+
+    padding-bottom: 10px;
+}
+@media screen and (min-width:768px ) {
+header {
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items: flex-start;
+        }   
+.logo_gbaf {
+        max-height: 15%;
+        max-width: 15%;
+        }
+}
+
+.logo_gbaf {
+    height: 20%;
+    width: 20%;
+}
+    
+.user_icon {
+    max-width: 100%;
+    height: auto;
+}   
+    
+.logo_nav {         /* logoGBAF + nav */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+    
+}
+
+
+/*NAVIGATEUR DROPDOWN*/
+.nav_button {                   /* =Bouton du navigateur "Nom & Prénom" */
+    background-color: white;
+    color: #c90000;
+    padding: 7px 8px;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+}
+
+.nav {                          /* div conteneur > nécessaire pour positionner le nav_content */
+    position: relative;
+    display: inline-block;
+    padding-left: 2px;
+}
+
+.nav_content {                  /* =Contenu du nav, hidden par défaut */
+    display: none;
+    position: absolute;
+    background-color:  white;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;                 /* z-i,dex: 1; =Ordre de positionnement: 1= devant les autres*/
+}
+
+.nav_content a {                /* Liens dans le nav_content */
+    color: black;
+    font-size: 0.9em;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav_content a:hover {          /* Change couleur du nav_content quand survol des liens */
+    color: #C90000;           
+}
+
+.nav:hover .nav_content {       /* Affiche le nav_content en block quand survol du nav */
+    display: block;
+}
+
+.nav:hover .nav_button {        /* Change la backgoundcolor du nav_button quand survol du nav */
+    background-color: #C90000;
+    color: white;
+}
+
+
+
+/*PAGE INDEX*******************************************************************************************/
+/*SECTION PRESENTATION*/
+.section_presentation {
+    padding: 10px;
+    margin-bottom: 5px;
+
+    font-size: 1em;
+    text-align: justify;
+}
+
+h1 {
+    text-align: center;
+}
+@media screen and (min-width: 768px) {
+    h1 {
+        text-align: left;
+    } 
+}
+
+
+
+.section_presentation ul {
+    display: inline-block; 
+}   
+
+.ul_groupes {
+    display: flex;
+    justify-content: center;
+}
+
+.illustration {
+    width: 100%;
+    max-height: 200px;
+    padding: 10px 10px 30px 10px;
+    align-self: center;
+}
+
+
+/*SECTION ACTEURS PARTENAIRES*/
+.section_acteurs {   /* section contenant DIVpresentation_acteur + DIVconteneur_acteurs*/
+    padding: 10px;
+
+    font-size: 1em;
+    text-align: justify;
+}
+
+
+.conteneur_acteurs {
+    border: 1px solid rgba(209, 209, 209, 0.894);
+    border-radius: 8px;
+    padding: 5px 15px;
+    margin: 10px;
+}
+
+.fiche_acteur {
+    font-size: 1em;
+    text-align: justify;
+    padding: 10px;
+
+    position: relative;
+}
+@media screen and (min-width: 768px) {
+    .conteneur_acteurs .fiche_acteur {
+        display:flex;
+        flex-direction:row;
+    }
+    
+}
+
+.conteneur_acteurs .texte_suite {
+    flex:1;
+    position: relative;
+    width: 60%;
+}
+/* A MODIFIER attention h2 max-width 50% =retour à la ligne si<768px !!! */
+
+.ellipsis {
+    text-overflow: ellipsis;    /*signale présence de contenu caché, cache le texte qui dépasse avec ... */
+    overflow: hidden;           /*cache le texte qui depasse*/
+    white-space: nowrap;        /*empeche renvoi à la ligne*/
+    width: 100%;
+    max-width: 50%;
+}
+
+/* DIV ACTEUR = Logo + titre/texte + bouton liresuite */
+
+
+
+.box_design{            /* >>design pour toutes les box */
+    border-radius: 8px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 15px 0;
+}
+
+
+.lire_suite {
+    bottom: 10px;
+    right: 20px;
+    position: absolute;
+}
+
+.lire_suite:hover {
+    background-color: red;
+ }
+
+
+ @media screen and (min-width: 768px) {
+    .conteneur_acteurs .logo_acteur {
+        width: 40%;
+        height: auto;
+        padding: 15px;
+    }
+}
+
+
+
+
+
+/*PAGE ACTEURS******************************************************************************************/
+
+/* SECTION ACTEURS */
+
+
+.logo_page_acteur {
+   width: 100%;
+   max-width: 600px;
+   align-self: center;
+}
+
+
+/* SECTION COMMENTAIRES */
+
+
+.thumb {
+    width: 8%;
+}
+
+.like_btn .conteneur_acteurs {
+width: 50px;
+}
+
+
+
+/* PAGE CONNEXION *************************************************************************************/
+
+/* SECTION connexion + inscription*/
+.connexion_inscription {
+    align-items: center;
+}
+
+/*CONNEXION*/
+label {
+    display: none;
+}
+
+.form_design {
+
+    text-align: center;
+    padding: 50px;
+}
+
+.connexion {
+    width: 100%;
+}
+/*depassement du bloc_page????? */
+
+
+.button {
+    padding: 7px 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+}
+
+.submit {
+    background-color: #C90000;
+    color: white;
+    margin: 10px;
+}
+
+input[type="text"]:active,
+input[type="text"]:focus, 
+input[type="password"]:active,
+input[type="password"]:focus
+{
+    border: 1px solid #C90000;
+    outline: none;
+  }
+
+input[type="text"], input[type="password"] {  /* regroupe les différents input */
+    width: 95%;
+    padding: 10px 5px;
+    margin-bottom: 20px;
+    align-items: center;
+    border-radius: 6px;
+    border: 1px solid #dddfe2;
+    box-shadow: 0 0 0 2px #e7f3ff;
+    text-align: center;
+}
+input:focus::placeholder {
+    color: #cec9d9;
+}
+
+
+
+/* autofocus: enlever bordure noire??????*/
+
+.forgot { 
+    padding: 5px 10px 5px 10px;
+    margin-top: 20px;
+
+    font-size: 95%;
+    text-align: center;
+    color: #C90000;
+
+    display: inline-block;
+}
+
+
+
+    /* INSCRIPTION */
+.create_account {
+    align-items: center;
+}
+
+.red_button {
+    background-color: #C90000;
+    color: white;
+    padding: 7px 10px;
+    margin: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px; 
+    font-family: tahoma,'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+
+    margin-bottom: 20px;
+}
+
+/*default font family pour les buttons?????  */
+
+/*PAGE INSCRIPTION*********************************************************************************************/
+
+
+
+/*PAGE MENTIONS ***********************************************************************************************/
+
+
+.mentions {
+align-items: center;
+text-align: justify;
+}
+
+/*PAGE PARAMETRES ***********************************************************************************************/
+
+
+
+
+
+
+
+
+/*FOOTER************************************************************************************************/
+ footer {
+    height: 100px;
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer a {
+    color: white;
+    padding: 10px;
+}
